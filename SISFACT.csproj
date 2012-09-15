@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CBDC1DC4-4A93-4EE2-BCD6-F22EB4BE3FEB}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SISFACT</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <Name>CrystalDecisions.CrystalReports.Engine</Name>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <Name>CrystalDecisions.ReportSource</Name>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <Name>CrystalDecisions.Shared</Name>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <Name>CrystalDecisions.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="STYLE">
+      <Name>STYLE</Name>
+      <HintPath>ref\STYLE.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Name>System.Data.DataSetExtensions</Name>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Name>System.Deployment</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\cFormasPag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\cMedicos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\cTipoVenda.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\cUtentes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\Data.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\Factura.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmAnalises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmCrystalViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmDocumentos2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmFacturacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmNc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmPesquisaMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmPwdReset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\FrmUtilizadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISFACT\listagem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\MedicoEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\MedicosEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\Nc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\Properties\Resources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\Properties\Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\Cachedlistagem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\CachednewReportADO_FacturaBase_Cliente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\CachednewReportADO_FacturaBase_Cliente_2via.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\CachednewReportADO_NcBase_Cliente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\CachednewReportADO_NcBase_Cliente_2via.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\CachedReportADO_ReciboClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\CachedReportADO_ReciboClientes_2via.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\cVerRelatorios.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\listagem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\newReportADO_FacturaBase_Cliente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\newReportADO_FacturaBase_Cliente_2via.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\newReportADO_NcBase_Cliente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\newReportADO_NcBase_Cliente_2via.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\ReportADO_ReciboClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\rpt\ReportADO_ReciboClientes_2via.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\Security.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\UtenteEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\UtentesEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SISFACT\Vpagos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SISFACT\VpagosTableAdapters\Vpagos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="SISFACT.AboutBox1.resources" />
+    <EmbeddedResource Include="SISFACT.FrmAnalises.resources" />
+    <EmbeddedResource Include="SISFACT.FrmCrystalViewer.resources" />
+    <EmbeddedResource Include="SISFACT.FrmDocumentos.resources" />
+    <EmbeddedResource Include="SISFACT.FrmDocumentos2.resources" />
+    <EmbeddedResource Include="SISFACT.FrmFacturacao.resources" />
+    <EmbeddedResource Include="SISFACT.FrmFacturas.resources" />
+    <EmbeddedResource Include="SISFACT.FrmLogin.resources" />
+    <EmbeddedResource Include="SISFACT.FrmMain.resources" />
+    <EmbeddedResource Include="SISFACT.FrmMsg.resources" />
+    <EmbeddedResource Include="SISFACT.FrmNc.resources" />
+    <EmbeddedResource Include="SISFACT.FrmNewUser.resources" />
+    <EmbeddedResource Include="SISFACT.FrmPesquisa.resources" />
+    <EmbeddedResource Include="SISFACT.FrmPesquisaMedico.resources" />
+    <EmbeddedResource Include="SISFACT.FrmPwdReset.resources" />
+    <EmbeddedResource Include="SISFACT.FrmSMS.resources" />
+    <EmbeddedResource Include="SISFACT.FrmSplash.resources" />
+    <EmbeddedResource Include="SISFACT.FrmUtilizadores.resources" />
+    <EmbeddedResource Include="SISFACT.Properties.Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="rpt\listagem.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rpt\ManualUtilizador.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rpt\newReportADO_FacturaBase_Cliente.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rpt\newReportADO_FacturaBase_Cliente_2via.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rpt\newReportADO_NcBase_Cliente.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rpt\newReportADO_NcBase_Cliente_2via.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rpt\ReportADO_ReciboClientes.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rpt\ReportADO_ReciboClientes_2via.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="rpt\GamasIP.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="rpt\SISFACT1.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
