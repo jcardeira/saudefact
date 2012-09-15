@@ -320,13 +320,25 @@
             base.MainMenuStrip = this.menuStrip1;
             base.Name = "FrmMain";
             base.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "SISFACT";
+            this.Text = "SaúdeFact - " + GetRunningVersion();
             base.WindowState = FormWindowState.Maximized;
             base.Load += new EventHandler(this.FrmMain2_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             base.ResumeLayout(false);
             base.PerformLayout();
+        }
+
+        public static Version GetRunningVersion()
+        {
+            try
+            {
+                return System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
+            }
+            catch
+            {
+                return Assembly.GetExecutingAssembly().GetName().Version;
+            }
         }
 
         private void notasDeCreditoToolStripMenuItem_Click(object sender, EventArgs e)

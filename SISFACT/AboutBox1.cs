@@ -66,7 +66,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new Size(0x5e, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Produto: SISFACT";
+            this.label1.Text = "Produto: SaúdeFact";
             this.label2.AutoSize = true;
             this.label2.BackColor = Color.Transparent;
             this.label2.Location = new Point(0x218, 0x131);

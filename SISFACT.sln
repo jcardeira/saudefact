@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SISFACT", "SISFACT.csproj", "{CBDC1DC4-4A93-4EE2-BCD6-F22EB4BE3FEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaudeFact", "SaudeFact.csproj", "{CBDC1DC4-4A93-4EE2-BCD6-F22EB4BE3FEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

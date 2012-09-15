@@ -102,6 +102,7 @@
         private void InitializeComponent()
         {
             ComponentResourceManager manager = new ComponentResourceManager(typeof(FrmLogin));
+            
             this.label1 = new Label();
             this.label2 = new Label();
             this.textBox1 = new TextBox();
@@ -169,17 +170,17 @@
             this.groupBox1.Text = "Login";
             base.AcceptButton = this.button1;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+//            base.AutoScaleMode = AutoScaleMode.Font;
             this.BackColor = Color.SteelBlue;
             base.ClientSize = new Size(0x11f, 0x98);
             base.Controls.Add(this.groupBox1);
             this.ForeColor = Color.White;
-            base.FormBorderStyle = FormBorderStyle.Fixed3D;
-            base.Icon = (Icon) manager.GetObject("$this.Icon");
+//            base.FormBorderStyle = FormBorderStyle.Fixed3D;
+//            base.Icon = (Icon) manager.GetObject("$this.Icon");
             base.MaximizeBox = false;
             base.Name = "FrmLogin";
             base.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Login -" + FrmMain.GetRunningVersion(); ;
             base.Load += new EventHandler(this.FrmLogin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

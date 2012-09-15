@@ -11,7 +11,6 @@
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Data.CorreScriptBD();
-            new FrmSplash().ShowDialog();
             string[] perm = null;
             string user = null;
             int userid = 0;
