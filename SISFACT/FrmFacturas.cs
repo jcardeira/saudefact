@@ -450,13 +450,13 @@
             this.dataGridView1.Size = new Size(0x198, 0xee);
             this.dataGridView1.TabIndex = 0;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+//            base.AutoScaleMode = AutoScaleMode.Font;
             this.BackColor = Color.SteelBlue;
             base.ClientSize = new Size(0x1b2, 0x1c5);
             base.Controls.Add(this.groupBox2);
             base.Controls.Add(this.groupBox1);
-            base.FormBorderStyle = FormBorderStyle.Fixed3D;
-            base.Icon = (Icon) manager.GetObject("$this.Icon");
+//            base.FormBorderStyle = FormBorderStyle.Fixed3D;
+//            base.Icon = (Icon) manager.GetObject("$this.Icon");
             base.MaximizeBox = false;
             base.Name = "FrmFacturas";
             base.StartPosition = FormStartPosition.CenterParent;

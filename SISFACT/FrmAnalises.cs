@@ -521,7 +521,7 @@
             this.dataGridView2.Size = new Size(0x3e0, 0x110);
             this.dataGridView2.TabIndex = 20;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+//            base.AutoScaleMode = AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = Color.SteelBlue;
             base.ClientSize = new Size(0x3fe, 0x2b3);
@@ -529,7 +529,7 @@
             base.Controls.Add(this.groupBox1);
             base.Controls.Add(this.groupBox2);
             this.ForeColor = Color.White;
-            base.Icon = (Icon) manager.GetObject("$this.Icon");
+//            base.Icon = (Icon) manager.GetObject("$this.Icon");
             base.Name = "FrmAnalises";
             base.StartPosition = FormStartPosition.CenterParent;
             this.Text = "Gest\x00e3o -  Tratamentos";

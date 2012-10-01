@@ -849,9 +849,7 @@ public partial class Factura : global::System.Data.DataSet {
             any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
             sequence.Items.Add(any2);
             global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-            attribute1.Name = "#pragma warning disable 1591
-
-namespace";
+            attribute1.Name = "#pragma warning disable 1591 namespace";
             attribute1.FixedValue = ds.Namespace;
             type.Attributes.Add(attribute1);
             global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();

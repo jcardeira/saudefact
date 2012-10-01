@@ -34,11 +34,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://saudefactvs.s3-website-eu-west-1.amazonaws.com/</InstallUrl>
+    <InstallUrl>http://saudefact.s3-website-eu-west-1.amazonaws.com/</InstallUrl>
     <PublisherName>Cardeira Venâncio</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -111,6 +111,11 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Factura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Factura.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -136,9 +141,6 @@
     </Compile>
     <Compile Include="SISFACT\Data.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SISFACT\Factura.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SISFACT\FrmAnalises.cs">
       <SubType>Form</SubType>
@@ -277,14 +279,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SISFACT.FrmAnalises.resources" />
     <EmbeddedResource Include="SISFACT.FrmCrystalViewer.resources" />
     <EmbeddedResource Include="SISFACT.FrmDocumentos.resources" />
     <EmbeddedResource Include="SISFACT.FrmDocumentos2.resources" />
     <EmbeddedResource Include="SISFACT.FrmFacturacao.resources" />
-    <EmbeddedResource Include="SISFACT.FrmFacturas.resources" />
     <EmbeddedResource Include="SISFACT.FrmLogin.resources" />
-    <EmbeddedResource Include="SISFACT.FrmMain.resources" />
     <EmbeddedResource Include="SISFACT.FrmMsg.resources" />
     <EmbeddedResource Include="SISFACT.FrmNc.resources" />
     <EmbeddedResource Include="SISFACT.FrmNewUser.resources" />
@@ -295,6 +294,9 @@
     <None Include="SISFACT.FrmSplash.resources" />
     <EmbeddedResource Include="SISFACT.FrmUtilizadores.resources" />
     <EmbeddedResource Include="SISFACT.Properties.Resources.resources" />
+    <EmbeddedResource Include="SISFACT\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SISFACT\FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +359,17 @@
     <Content Include="rpt\ReportADO_ReciboClientes_2via.rpt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Factura.xsc">
+      <DependentUpon>Factura.xsd</DependentUpon>
+    </None>
+    <None Include="Factura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Factura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Factura.xss">
+      <DependentUpon>Factura.xsd</DependentUpon>
+    </None>
     <None Include="SISFACT_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -468,6 +481,12 @@
       <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="SmsSender\SmsSender.csproj">
+      <Project>{4CBB4503-0E17-4BF9-B7C7-62B5D338D486}</Project>
+      <Name>SmsSender</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -226,6 +226,30 @@
             }
         }
 
+        public static void GetSenderAndPhone(out string senderID, out string senderPhone)
+        {
+            string servidor = GetServidor(Getgama());
+            senderID = "";
+            senderPhone = "";
+            XmlTextReader reader = new XmlTextReader(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + @"\rpt\GamasIP.xml");
+            XmlDocument document = new XmlDocument();
+            document.Load(reader);
+            reader.Close();
+            string xpath = "connections/ips/gama/servidor";
+            foreach (XmlNode node in document.SelectNodes(xpath))
+            {
+                if (node.InnerText == servidor)
+                {
+                    XmlNode nextSibling = node.NextSibling;
+                    nextSibling = nextSibling.NextSibling;
+                    nextSibling = nextSibling.NextSibling;
+                    senderID = nextSibling.InnerText;
+                    nextSibling = nextSibling.NextSibling;
+                    senderPhone = nextSibling.InnerText;
+                }
+            }
+        }
+
         public static string GetServidor(string gama)
         {
             bool flag = false;
