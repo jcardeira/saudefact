@@ -88,7 +88,7 @@
         private void envioSMSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 f = new Form1(this);
-            f.Connection = Security.GetServidor(Security.Getgama());
+            f.Connection = Security.GetServidor("");
             string clinica, ip, senderId, senderPhone;
             Security.GetIpSMS(out ip, out clinica);
             Security.GetSenderAndPhone(out senderId, out senderPhone);

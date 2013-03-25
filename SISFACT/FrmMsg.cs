@@ -104,14 +104,10 @@
             this.groupBox1.TabIndex = 0x21;
             this.groupBox1.TabStop = false;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
             this.BackColor = Color.SteelBlue;
             base.ClientSize = new Size(0x16f, 0xa6);
             base.Controls.Add(this.groupBox1);
             this.ForeColor = SystemColors.ActiveCaptionText;
-            base.FormBorderStyle = FormBorderStyle.Fixed3D;
-            base.Icon = (Icon) manager.GetObject("$this.Icon");
-            base.MaximizeBox = false;
             base.Name = "FrmMsg";
             base.StartPosition = FormStartPosition.CenterScreen;
             base.Load += new EventHandler(this.FrmMsg_Load);

@@ -31,13 +31,16 @@
 
         private void InitializeComponent()
         {
-            ComponentResourceManager manager = new ComponentResourceManager(typeof(FrmCrystalViewer));
-            this.crystalReportViewer1 = new CrystalReportViewer();
-            base.SuspendLayout();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.SuspendLayout();
+            // 
+            // crystalReportViewer1
+            // 
             this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = BorderStyle.FixedSingle;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.DisplayGroupTree = false;
-            this.crystalReportViewer1.Location = new Point(3, 0x1b);
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.SelectionFormula = "";
             this.crystalReportViewer1.ShowExportButton = false;
@@ -46,22 +49,22 @@
             this.crystalReportViewer1.ShowRefreshButton = false;
             this.crystalReportViewer1.ShowTextSearchButton = false;
             this.crystalReportViewer1.ShowZoomButton = false;
-            this.crystalReportViewer1.Size = new Size(0x2af, 0x224);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(702, 606);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
-            base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
-            this.BackColor = Color.SteelBlue;
-            base.ClientSize = new Size(0x2be, 0x25e);
-            base.Controls.Add(this.crystalReportViewer1);
-            this.ForeColor = Color.White;
-            base.Icon = (Icon) manager.GetObject("$this.Icon");
-            base.MaximizeBox = false;
-            base.Name = "FrmCrystalViewer";
-            base.StartPosition = FormStartPosition.CenterParent;
-            this.Text = "Impress\x00e3o -  Documentos";
-            base.Load += new EventHandler(this.FrmCrystalViewer_Load);
-            base.ResumeLayout(false);
+            // 
+            // FrmCrystalViewer
+            // 
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(702, 606);
+            this.Controls.Add(this.crystalReportViewer1);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Name = "FrmCrystalViewer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Impressão -  Documentos";
+            this.Load += new System.EventHandler(this.FrmCrystalViewer_Load);
+            this.ResumeLayout(false);
+
         }
 
         protected override void OnPaint(PaintEventArgs e)

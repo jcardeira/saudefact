@@ -2,6 +2,7 @@
 {
     using System;
     using System.Windows.Forms;
+    using System.Diagnostics;
 
     internal static class Program
     {
@@ -51,8 +52,9 @@
                     Application.Run(new FrmMain(perm, userid, user));
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Trace.WriteLine(e.Message);
             }
         }
     }

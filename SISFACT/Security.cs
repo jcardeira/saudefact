@@ -10,6 +10,7 @@
     using System.Text;
     using System.Windows.Forms;
     using System.Xml;
+    using Properties;
 
     public static class Security
     {
@@ -164,49 +165,13 @@
 
         public static string GetCnn()
         {
-            string gama = Getgama();
-            switch (gama)
-            {
-                case "MEDINFOT-471C1F":
-                {
-                    string str2 = ConfigurationSettings.AppSettings["SqlCnn"].Replace("servidor", "MEDINFOT-471C1F");
-                    break;
-                }
-                case "Antonio-NLS":
-                    return ConfigurationSettings.AppSettings["SqlCnn"].Replace("servidor", @".\sql2005").Replace("a27pw82xb", "sa1234");
-            }
-            string servidor = GetServidor(gama);
-            return ConfigurationSettings.AppSettings["SqlCnn"].Replace("servidor", servidor);
+            return SaudeFact.Properties.Settings.Default.sqlConn;
         }
-
-        public static string Getgama()
-        {
-            string hostName = Dns.GetHostName();
-            IPHostEntry hostByName = Dns.GetHostByName(hostName);
-            switch (hostName)
-            {
-                case "Antonio-NLS":
-                    return "20";
-
-                case "MEDINFOT-471C1F":
-                    return "MEDINFOT-471C1F";
-            }
-            IPAddress[] addressList = hostByName.AddressList;
-            for (int i = 0; i < addressList.Length; i++)
-            {
-                if (addressList[i].ToString().StartsWith("192."))
-                {
-                    string str2 = "";
-                    str2 = addressList[i].ToString().Remove(addressList[i].ToString().LastIndexOf("."));
-                    return str2.Remove(0, str2.LastIndexOf(".") + 1);
-                }
-            }
-            return "";
-        }
+        
 
         public static void GetIpSMS(out string clinicaip, out string clinica)
         {
-            string servidor = GetServidor(Getgama());
+            string servidor = GetServidor("");
             clinicaip = "";
             clinica = "";
             XmlTextReader reader = new XmlTextReader(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + @"\rpt\GamasIP.xml");
@@ -228,7 +193,7 @@
 
         public static void GetSenderAndPhone(out string senderID, out string senderPhone)
         {
-            string servidor = GetServidor(Getgama());
+            string servidor = GetServidor("");
             senderID = "";
             senderPhone = "";
             XmlTextReader reader = new XmlTextReader(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + @"\rpt\GamasIP.xml");

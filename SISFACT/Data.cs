@@ -386,7 +386,7 @@
                 {
                     str = "select  case when fact.fecha >=CONVERT(datetime,'01-01-2011',105) then convert(varchar(3),(select * from cert_sys_pre)) + ' ' + convert(varchar(10),fact.numero) else  convert(varchar(5),fact.numero) end  as Numero,'Factura' Tipo,fact.cobrada Estado,fact.fecha Data, ";
                     str = (str + "isnull(pac.nombre ,'')+' '+isnull(pac.apellido1,'') as Paciente, " + "SUM(act.haber) Total ") + "from actuacion act , factura fact,paciente pac, tratamiento tr where act.factura_id=fact.factura_id " + "and fact.paciente_id=act.paciente_id and act.paciente_id =pac.paciente_id and act.tratamiento_id=tr.tratamiento_id ";
-                    if ((NHC == "") & (NOME == ""))
+                        if ((NHC == "") & (NOME == ""))
                     {
                         str = str + "and fact.fecha >= convert(datetime,'" + GetDate(dtINI) + "',105 ) and fact.fecha < convert(datetime,'" + GetDate(dtEND) + "',105) +1 ";
                     }

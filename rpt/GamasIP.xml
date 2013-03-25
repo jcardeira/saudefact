@@ -17,41 +17,5 @@
       <senderID>SerSaude</senderID>
       <senderPhone>214930313</senderPhone>
     </gama>
-    <gama>
-      <ip>35</ip>
-	  <servidor>192.168.35.1</servidor>
-	  <clinicaip>192.168.35.1</clinicaip>
-	  <clinica>Parede</clinica>
-	</gama>
-    <gama>
-      <ip>36</ip>
-	  <servidor>192.168.36.1</servidor>
-      <clinicaip>192.168.36.1</clinicaip>
-	  <clinica>Faro</clinica>
-	</gama>
-    <gama>
-      <ip>37</ip>
-	  <servidor>192.168.37.1</servidor>
-	  <clinicaip>192.168.37.1</clinicaip>
-	  <clinica>Gondomar</clinica>
-	</gama>
-    <gama>
-      <ip>38</ip>
-	  <servidor>192.168.38.252</servidor>
-      <clinicaip>192.168.38.1</clinicaip>
-	  <clinica>Entroncamento</clinica>
-	</gama>
-    <gama>
-      <ip>39</ip>
-	  <servidor>192.168.39.2</servidor>
-      <clinicaip>192.168.39.1</clinicaip>
-	  <clinica>Torres Vedras</clinica>
-	</gama>
-	<gama>
-	  <ip>40</ip>
-	  <servidor>192.168.40.2</servidor>
-	  <clinicaip>192.168.40.1</clinicaip>
-	  <clinica>Castelo Branco</clinica>
-	</gama>
   </ips>
 </connections>
