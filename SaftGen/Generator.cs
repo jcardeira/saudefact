@@ -15,11 +15,14 @@ namespace SaftGen
         private List<Customer> custs = new List<Customer>();
         private List<Product> prods = new List<Product>();
         private List<SourceDocumentsSalesInvoicesInvoice> invs = new List<SourceDocumentsSalesInvoicesInvoice>();
-        
 
+        private DateTime startDate;
+        private DateTime endDate;
 
-        public Generator()
+        public Generator(DateTime start, DateTime end)
         {
+            startDate = start;
+            endDate = end.AddDays(-1);
         }
 
         public void GenerateXML()
@@ -178,8 +181,8 @@ namespace SaftGen
             af.Header.CompanyAddress.PostalCode = (string)r["postalcode"].ToString().Substring(0, 4) + "-" + r["postalcode"].ToString().Substring(4, 3);
             af.Header.CompanyAddress.Country = "PT";
             af.Header.FiscalYear = "2013";
-            af.Header.StartDate = new DateTime(2013, 1, 1);
-            af.Header.EndDate = new DateTime(2013, 1, 31);
+            af.Header.StartDate = startDate;
+            af.Header.EndDate = endDate;
             af.Header.CurrencyCode = "EUR";
             af.Header.DateCreated = DateTime.Now;
             af.Header.TaxEntity = "Global";

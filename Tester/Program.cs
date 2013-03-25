@@ -13,9 +13,10 @@ namespace Tester
     {
         static void Main(string[] args)
         {
-            Generator g = new SaftGen.Generator();
             DateTime start = new DateTime(2013, 2, 1);
             DateTime end = new DateTime(2013, 3, 1);
+            Generator g = new SaftGen.Generator(start, end);
+           
             g.FillHeader(DBHelper.GetHeader());
             g.FillCustomers(DBHelper.GetCustomersWithInvs(start, end));
             g.FillProducts(DBHelper.GetProductsWithInvs(start, end));
